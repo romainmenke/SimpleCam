@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05201AB11BE90DB1009B98DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AB01BE90DB1009B98DE /* AppDelegate.swift */; };
+		05201AB31BE90DB1009B98DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AB21BE90DB1009B98DE /* ViewController.swift */; };
+		05201AB61BE90DB1009B98DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05201AB41BE90DB1009B98DE /* Main.storyboard */; };
+		05201AB91BE90DB1009B98DE /* SimpleCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05201AB71BE90DB1009B98DE /* SimpleCam.xcdatamodeld */; };
+		05201ABB1BE90DB1009B98DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05201ABA1BE90DB1009B98DE /* Assets.xcassets */; };
+		05201ABE1BE90DB1009B98DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05201ABC1BE90DB1009B98DE /* LaunchScreen.storyboard */; };
+		05201AC91BE90DB2009B98DE /* SimpleCamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AC81BE90DB2009B98DE /* SimpleCamUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05201AC51BE90DB2009B98DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05201AA51BE90DB1009B98DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05201AAC1BE90DB1009B98DE;
+			remoteInfo = SimpleCam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05201AAD1BE90DB1009B98DE /* SimpleCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05201AB01BE90DB1009B98DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05201AB21BE90DB1009B98DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05201AB51BE90DB1009B98DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05201AB81BE90DB1009B98DE /* SimpleCam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleCam.xcdatamodel; sourceTree = "<group>"; };
+		05201ABA1BE90DB1009B98DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05201ABD1BE90DB1009B98DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05201ABF1BE90DB1009B98DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05201AC41BE90DB2009B98DE /* SimpleCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05201AC81BE90DB2009B98DE /* SimpleCamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCamUITests.swift; sourceTree = "<group>"; };
+		05201ACA1BE90DB2009B98DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05201AAA1BE90DB1009B98DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05201AC11BE90DB2009B98DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05201AA41BE90DB1009B98DE = {
+			isa = PBXGroup;
+			children = (
+				05201AAF1BE90DB1009B98DE /* SimpleCam */,
+				05201AC71BE90DB2009B98DE /* SimpleCamUITests */,
+				05201AAE1BE90DB1009B98DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05201AAE1BE90DB1009B98DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05201AAD1BE90DB1009B98DE /* SimpleCam.app */,
+				05201AC41BE90DB2009B98DE /* SimpleCamUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05201AAF1BE90DB1009B98DE /* SimpleCam */ = {
+			isa = PBXGroup;
+			children = (
+				05201AB01BE90DB1009B98DE /* AppDelegate.swift */,
+				05201AB21BE90DB1009B98DE /* ViewController.swift */,
+				05201AB41BE90DB1009B98DE /* Main.storyboard */,
+				05201ABA1BE90DB1009B98DE /* Assets.xcassets */,
+				05201ABC1BE90DB1009B98DE /* LaunchScreen.storyboard */,
+				05201ABF1BE90DB1009B98DE /* Info.plist */,
+				05201AB71BE90DB1009B98DE /* SimpleCam.xcdatamodeld */,
+			);
+			path = SimpleCam;
+			sourceTree = "<group>";
+		};
+		05201AC71BE90DB2009B98DE /* SimpleCamUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05201AC81BE90DB2009B98DE /* SimpleCamUITests.swift */,
+				05201ACA1BE90DB2009B98DE /* Info.plist */,
+			);
+			path = SimpleCamUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05201AAC1BE90DB1009B98DE /* SimpleCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05201ACD1BE90DB2009B98DE /* Build configuration list for PBXNativeTarget "SimpleCam" */;
+			buildPhases = (
+				05201AA91BE90DB1009B98DE /* Sources */,
+				05201AAA1BE90DB1009B98DE /* Frameworks */,
+				05201AAB1BE90DB1009B98DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleCam;
+			productName = SimpleCam;
+			productReference = 05201AAD1BE90DB1009B98DE /* SimpleCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05201AC31BE90DB2009B98DE /* SimpleCamUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05201AD01BE90DB2009B98DE /* Build configuration list for PBXNativeTarget "SimpleCamUITests" */;
+			buildPhases = (
+				05201AC01BE90DB2009B98DE /* Sources */,
+				05201AC11BE90DB2009B98DE /* Frameworks */,
+				05201AC21BE90DB2009B98DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05201AC61BE90DB2009B98DE /* PBXTargetDependency */,
+			);
+			name = SimpleCamUITests;
+			productName = SimpleCamUITests;
+			productReference = 05201AC41BE90DB2009B98DE /* SimpleCamUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05201AA51BE90DB1009B98DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Romain Menke";
+				TargetAttributes = {
+					05201AAC1BE90DB1009B98DE = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					05201AC31BE90DB2009B98DE = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 05201AAC1BE90DB1009B98DE;
+					};
+				};
+			};
+			buildConfigurationList = 05201AA81BE90DB1009B98DE /* Build configuration list for PBXProject "SimpleCam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05201AA41BE90DB1009B98DE;
+			productRefGroup = 05201AAE1BE90DB1009B98DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05201AAC1BE90DB1009B98DE /* SimpleCam */,
+				05201AC31BE90DB2009B98DE /* SimpleCamUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05201AAB1BE90DB1009B98DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05201ABE1BE90DB1009B98DE /* LaunchScreen.storyboard in Resources */,
+				05201ABB1BE90DB1009B98DE /* Assets.xcassets in Resources */,
+				05201AB61BE90DB1009B98DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05201AC21BE90DB2009B98DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05201AA91BE90DB1009B98DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05201AB91BE90DB1009B98DE /* SimpleCam.xcdatamodeld in Sources */,
+				05201AB31BE90DB1009B98DE /* ViewController.swift in Sources */,
+				05201AB11BE90DB1009B98DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05201AC01BE90DB2009B98DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05201AC91BE90DB2009B98DE /* SimpleCamUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05201AC61BE90DB2009B98DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05201AAC1BE90DB1009B98DE /* SimpleCam */;
+			targetProxy = 05201AC51BE90DB2009B98DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05201AB41BE90DB1009B98DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05201AB51BE90DB1009B98DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05201ABC1BE90DB1009B98DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05201ABD1BE90DB1009B98DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05201ACB1BE90DB2009B98DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05201ACC1BE90DB2009B98DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05201ACE1BE90DB2009B98DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpleCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "menke-dev.SimpleCam";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05201ACF1BE90DB2009B98DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpleCam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "menke-dev.SimpleCam";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		05201AD11BE90DB2009B98DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SimpleCamUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "menke-dev.SimpleCamUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SimpleCam;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		05201AD21BE90DB2009B98DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SimpleCamUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "menke-dev.SimpleCamUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SimpleCam;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05201AA81BE90DB1009B98DE /* Build configuration list for PBXProject "SimpleCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05201ACB1BE90DB2009B98DE /* Debug */,
+				05201ACC1BE90DB2009B98DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05201ACD1BE90DB2009B98DE /* Build configuration list for PBXNativeTarget "SimpleCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05201ACE1BE90DB2009B98DE /* Debug */,
+				05201ACF1BE90DB2009B98DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		05201AD01BE90DB2009B98DE /* Build configuration list for PBXNativeTarget "SimpleCamUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05201AD11BE90DB2009B98DE /* Debug */,
+				05201AD21BE90DB2009B98DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		05201AB71BE90DB1009B98DE /* SimpleCam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05201AB81BE90DB1009B98DE /* SimpleCam.xcdatamodel */,
+			);
+			currentVersion = 05201AB81BE90DB1009B98DE /* SimpleCam.xcdatamodel */;
+			path = SimpleCam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 05201AA51BE90DB1009B98DE /* Project object */;
+}
