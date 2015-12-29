@@ -14,6 +14,16 @@
 		05201ABB1BE90DB1009B98DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05201ABA1BE90DB1009B98DE /* Assets.xcassets */; };
 		05201ABE1BE90DB1009B98DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05201ABC1BE90DB1009B98DE /* LaunchScreen.storyboard */; };
 		05201AC91BE90DB2009B98DE /* SimpleCamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AC81BE90DB2009B98DE /* SimpleCamUITests.swift */; };
+		05201AD71BE90E84009B98DE /* Thumbnail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AD31BE90E84009B98DE /* Thumbnail+CoreDataProperties.swift */; };
+		05201AD81BE90E84009B98DE /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AD41BE90E84009B98DE /* Thumbnail.swift */; };
+		05201AD91BE90E84009B98DE /* FullRes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AD51BE90E84009B98DE /* FullRes+CoreDataProperties.swift */; };
+		05201ADA1BE90E84009B98DE /* FullRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05201AD61BE90E84009B98DE /* FullRes.swift */; };
+		05A646911C32A6F40002C9A5 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A646901C32A6F40002C9A5 /* CGSizeExtension.swift */; };
+		05A646931C32A86B0002C9A5 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A646921C32A86B0002C9A5 /* UIImageExtensions.swift */; };
+		05A646951C32A91E0002C9A5 /* SavingImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A646941C32A91E0002C9A5 /* SavingImages.swift */; };
+		05A646971C32A9490002C9A5 /* LoadingImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A646961C32A9490002C9A5 /* LoadingImages.swift */; };
+		05A646991C32AA420002C9A5 /* ImagePickerSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A646981C32AA420002C9A5 /* ImagePickerSetup.swift */; };
+		05A6469D1C32AADF0002C9A5 /* CoreDataSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6469C1C32AADF0002C9A5 /* CoreDataSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,16 @@
 		05201AC41BE90DB2009B98DE /* SimpleCamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleCamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05201AC81BE90DB2009B98DE /* SimpleCamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCamUITests.swift; sourceTree = "<group>"; };
 		05201ACA1BE90DB2009B98DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05201AD31BE90E84009B98DE /* Thumbnail+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Thumbnail+CoreDataProperties.swift"; path = "CD/Thumbnail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		05201AD41BE90E84009B98DE /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Thumbnail.swift; path = CD/Thumbnail.swift; sourceTree = "<group>"; };
+		05201AD51BE90E84009B98DE /* FullRes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FullRes+CoreDataProperties.swift"; path = "CD/FullRes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		05201AD61BE90E84009B98DE /* FullRes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullRes.swift; path = CD/FullRes.swift; sourceTree = "<group>"; };
+		05A646901C32A6F40002C9A5 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		05A646921C32A86B0002C9A5 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		05A646941C32A91E0002C9A5 /* SavingImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingImages.swift; sourceTree = "<group>"; };
+		05A646961C32A9490002C9A5 /* LoadingImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingImages.swift; sourceTree = "<group>"; };
+		05A646981C32AA420002C9A5 /* ImagePickerSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerSetup.swift; sourceTree = "<group>"; };
+		05A6469C1C32AADF0002C9A5 /* CoreDataSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,10 @@
 		05201AA41BE90DB1009B98DE = {
 			isa = PBXGroup;
 			children = (
+				05201AD31BE90E84009B98DE /* Thumbnail+CoreDataProperties.swift */,
+				05201AD41BE90E84009B98DE /* Thumbnail.swift */,
+				05201AD51BE90E84009B98DE /* FullRes+CoreDataProperties.swift */,
+				05201AD61BE90E84009B98DE /* FullRes.swift */,
 				05201AAF1BE90DB1009B98DE /* SimpleCam */,
 				05201AC71BE90DB2009B98DE /* SimpleCamUITests */,
 				05201AAE1BE90DB1009B98DE /* Products */,
@@ -79,6 +103,8 @@
 		05201AAF1BE90DB1009B98DE /* SimpleCam */ = {
 			isa = PBXGroup;
 			children = (
+				05A6469A1C32AAB10002C9A5 /* UIKit Extensions */,
+				05A6469B1C32AABD0002C9A5 /* ViewController Extensions */,
 				05201AB01BE90DB1009B98DE /* AppDelegate.swift */,
 				05201AB21BE90DB1009B98DE /* ViewController.swift */,
 				05201AB41BE90DB1009B98DE /* Main.storyboard */,
@@ -97,6 +123,26 @@
 				05201ACA1BE90DB2009B98DE /* Info.plist */,
 			);
 			path = SimpleCamUITests;
+			sourceTree = "<group>";
+		};
+		05A6469A1C32AAB10002C9A5 /* UIKit Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05A646901C32A6F40002C9A5 /* CGSizeExtension.swift */,
+				05A646921C32A86B0002C9A5 /* UIImageExtensions.swift */,
+			);
+			name = "UIKit Extensions";
+			sourceTree = "<group>";
+		};
+		05A6469B1C32AABD0002C9A5 /* ViewController Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05A646941C32A91E0002C9A5 /* SavingImages.swift */,
+				05A646961C32A9490002C9A5 /* LoadingImages.swift */,
+				05A646981C32AA420002C9A5 /* ImagePickerSetup.swift */,
+				05A6469C1C32AADF0002C9A5 /* CoreDataSetup.swift */,
+			);
+			name = "ViewController Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +195,7 @@
 				TargetAttributes = {
 					05201AAC1BE90DB1009B98DE = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = UXG58KCAGQ;
 					};
 					05201AC31BE90DB2009B98DE = {
 						CreatedOnToolsVersion = 7.1;
@@ -200,9 +247,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A646931C32A86B0002C9A5 /* UIImageExtensions.swift in Sources */,
+				05201AD71BE90E84009B98DE /* Thumbnail+CoreDataProperties.swift in Sources */,
+				05201ADA1BE90E84009B98DE /* FullRes.swift in Sources */,
+				05A646991C32AA420002C9A5 /* ImagePickerSetup.swift in Sources */,
+				05A646911C32A6F40002C9A5 /* CGSizeExtension.swift in Sources */,
 				05201AB91BE90DB1009B98DE /* SimpleCam.xcdatamodeld in Sources */,
 				05201AB31BE90DB1009B98DE /* ViewController.swift in Sources */,
+				05201AD81BE90E84009B98DE /* Thumbnail.swift in Sources */,
+				05201AD91BE90E84009B98DE /* FullRes+CoreDataProperties.swift in Sources */,
+				05A646971C32A9490002C9A5 /* LoadingImages.swift in Sources */,
 				05201AB11BE90DB1009B98DE /* AppDelegate.swift in Sources */,
+				05A6469D1C32AADF0002C9A5 /* CoreDataSetup.swift in Sources */,
+				05A646951C32A91E0002C9A5 /* SavingImages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "menke-dev.SimpleCam";
@@ -340,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "menke-dev.SimpleCam";
@@ -390,6 +449,7 @@
 				05201ACF1BE90DB2009B98DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05201AD01BE90DB2009B98DE /* Build configuration list for PBXNativeTarget "SimpleCamUITests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +458,7 @@
 				05201AD21BE90DB2009B98DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

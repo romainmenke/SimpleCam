@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleCam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5Q-a7-Fpv">
+                                <rect key="frame" x="273" y="50" width="55" height="30"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="capture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXi-dk-cn0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-uZ-tvR">
+                                <rect key="frame" x="283" y="100" width="34" height="30"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="load:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bU7-nW-MCa"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-jo-gFR">
+                                <rect key="frame" x="0.0" y="138" width="600" height="462"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h5Q-a7-Fpv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oo-vv-2H6"/>
+                            <constraint firstItem="h5Q-a7-Fpv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7y5-Ar-KZf"/>
+                            <constraint firstItem="8tg-uZ-tvR" firstAttribute="top" secondItem="h5Q-a7-Fpv" secondAttribute="bottom" constant="20" id="E78-nH-VRU"/>
+                            <constraint firstItem="RtQ-jo-gFR" firstAttribute="top" secondItem="8tg-uZ-tvR" secondAttribute="bottom" constant="8" id="Q57-Tf-xkv"/>
+                            <constraint firstItem="RtQ-jo-gFR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QGk-BI-ClC"/>
+                            <constraint firstItem="h5Q-a7-Fpv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="a9G-EQ-q3v"/>
+                            <constraint firstItem="h5Q-a7-Fpv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kcY-tJ-H1d"/>
+                            <constraint firstItem="8tg-uZ-tvR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qRY-oz-Y8s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RtQ-jo-gFR" secondAttribute="trailing" constant="-20" id="xWS-C7-3yB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RtQ-jo-gFR" secondAttribute="bottom" id="xvm-T3-o62"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3oo-vv-2H6"/>
+                                <exclude reference="kcY-tJ-H1d"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="RtQ-jo-gFR" id="EEo-wK-vLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="315"/>
         </scene>
     </scenes>
 </document>

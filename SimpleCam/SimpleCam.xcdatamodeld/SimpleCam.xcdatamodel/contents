@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9056" systemVersion="15B38b" minimumToolsVersion="Automatic">
+    <entity name="FullRes" representedClassName=".FullRes" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="thumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thumbnail" inverseName="fullRes" inverseEntity="Thumbnail" syncable="YES"/>
+    </entity>
+    <entity name="Thumbnail" representedClassName=".Thumbnail" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="fullRes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FullRes" inverseName="thumbnail" inverseEntity="FullRes" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FullRes" positionX="-72" positionY="-18" width="128" height="73"/>
+        <element name="Thumbnail" positionX="135" positionY="-12" width="128" height="88"/>
+    </elements>
 </model>

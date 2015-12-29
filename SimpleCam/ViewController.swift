@@ -7,19 +7,47 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
+    
+    // imageview to display loaded image
+    @IBOutlet weak var imageView: UIImageView!
 
+    // image picker for capture / load
+    let imagePicker = UIImagePickerController()
+    
+    // dispatch queues
+    let convertQueue = dispatch_queue_create("convertQueue", DISPATCH_QUEUE_CONCURRENT)
+    let saveQueue = dispatch_queue_create("saveQueue", DISPATCH_QUEUE_CONCURRENT)
+    
+    // moc
+    var managedContext : NSManagedObjectContext?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        imagePickerSetup() // image picker delegate and settings
+        
+        coreDataSetup() // set value of moc on the right thread
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func capture(sender: AnyObject) { // button action
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
-
-
+    
+    @IBAction func load(sender: AnyObject) { // button action
+        
+        loadImages { (images) -> Void in
+            if let thumbnailData = images?.last?.thumbnail?.imageData {
+                let image = UIImage(data: thumbnailData)
+                self.imageView.image = image
+            }
+        }
+    }
 }
+
+
 
