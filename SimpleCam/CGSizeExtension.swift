@@ -13,20 +13,8 @@ extension CGSize {
     
     func resizeFill(toSize: CGSize) -> CGSize {
         
-        let aspectOne = self.height / self.width
-        let aspectTwo = toSize.height / toSize.width
-        
-        let scale : CGFloat
-        
-        if aspectOne < aspectTwo {
-            scale = self.height / toSize.height
-        } else {
-            scale = self.width / toSize.width
-        }
-        
-        let newHeight = self.height / scale
-        let newWidth = self.width / scale
-        return CGSize(width: newWidth, height: newHeight)
+        let scale : CGFloat = (self.height / self.width) < (toSize.height / toSize.width) ? (self.height / toSize.height) : (self.width / toSize.width)
+        return CGSize(width: (self.width / scale), height: (self.height / scale))
         
     }
 }
