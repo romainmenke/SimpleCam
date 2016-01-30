@@ -12,10 +12,28 @@ import UIKit
 
 extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    /**
+     Setup imagePicker and display Alert if it is not possible
+     */
     func imagePickerSetup() {
         
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePickerSetup(forSource: .Camera)
+        
+    }
+    
+    /**
+     Setup imagePicker and display Alert if it is not possible
+     
+     - parameter source: The Source for the imagePicker
+     */
+    func imagePickerSetup(forSource source : UIImagePickerControllerSourceType) {
+        if canStartPicker(forSource: source, withAlert: true) {
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = source
+            
+            self.imagePicker = picker
+        }
         
     }
     

@@ -12,6 +12,11 @@ import CoreData
 
 extension ViewController {
     
+    /**
+     Convert Image to JPEG and generate a thumbnail
+     
+     - parameter image: a captured image
+     */
     func prepareImageForSaving(image:UIImage) {
         
         // use date as unique id
@@ -46,6 +51,13 @@ extension ViewController {
 
 extension ViewController {
 
+    /**
+     Save image to Core Data
+     
+     - parameter imageData:     NSData representation of the original image
+     - parameter thumbnailData: NSData representation of the thumbnail image
+     - parameter date:          timestamp
+     */
     func saveImage(imageData:NSData, thumbnailData:NSData, date: Double) {
         
         dispatch_barrier_sync(saveQueue) {

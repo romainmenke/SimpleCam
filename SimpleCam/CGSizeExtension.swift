@@ -11,6 +11,13 @@ import UIKit
 
 extension CGSize {
     
+    /**
+     Calculate scaled size with the same aspect ratio
+     
+     - parameter toSize: target size
+     
+     - returns: scaled size
+     */
     func resizeFill(toSize: CGSize) -> CGSize {
         
         let scale : CGFloat = (self.height / self.width) < (toSize.height / toSize.width) ? (self.height / toSize.height) : (self.width / toSize.width)

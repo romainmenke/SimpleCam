@@ -13,6 +13,9 @@ import UIKit
 
 extension ViewController {
     
+    /**
+     Start Core Data managed context on the correct queue
+     */
     func coreDataSetup() {
         
         dispatch_sync(saveQueue) {

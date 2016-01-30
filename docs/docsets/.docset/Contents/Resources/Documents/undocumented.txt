@@ -1,0 +1,39 @@
+Thumbnail.swift
+	class Thumbnail : NSManagedObject
+	class Thumbnail: NSManagedObject
+Thumbnail+CoreDataProperties.swift
+	@NSManaged var imageData: NSData?
+	@NSManaged var id: NSNumber?
+	@NSManaged var fullRes: NSManagedObject?
+FullRes.swift
+	class FullRes: NSManagedObject
+	class FullRes : NSManagedObject
+ViewController.swift
+	class ViewController : UIViewController
+	class ViewController : UIViewController
+	class ViewController: UIViewController
+	override func viewDidAppear(animated: Bool)
+	class ViewController : UIViewController
+	class ViewController : UIViewController
+	class ViewController : UIViewController
+	class ViewController : UIViewController
+	class ViewController : UIViewController
+ImagePickerSetup.swift
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
+FullRes+CoreDataProperties.swift
+	@NSManaged var imageData: NSData?
+	@NSManaged var thumbnail: Thumbnail?
+AppDelegate.swift
+	class AppDelegate: UIResponder, UIApplicationDelegate
+	var window: UIWindow?
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+	func applicationWillResignActive(application: UIApplication)
+	func applicationDidEnterBackground(application: UIApplication)
+	func applicationWillEnterForeground(application: UIApplication)
+	func applicationDidBecomeActive(application: UIApplication)
+	func applicationWillTerminate(application: UIApplication)
+	lazy var applicationDocumentsDirectory: NSURL =
+	lazy var managedObjectModel: NSManagedObjectModel =
+	lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator =
+	lazy var managedObjectContext: NSManagedObjectContext =
+	func saveContext ()

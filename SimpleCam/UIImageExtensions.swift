@@ -11,6 +11,13 @@ import UIKit
 
 extension UIImage {
     
+    /**
+     Scales the image to a target size
+     
+     - parameter newSize: the target size
+     
+     - returns: the scaled image
+     */
     func scale(toSize newSize:CGSize) -> UIImage {
         
         // make sure the new size has the correct aspect ratio

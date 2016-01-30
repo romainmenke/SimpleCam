@@ -11,39 +11,68 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    // imageview to display loaded image
+    /// The UIImageView to display loaded images.
     @IBOutlet weak var imageView: UIImageView!
 
-    // image picker for capture / load
-    let imagePicker = UIImagePickerController()
+    /// The UIImagePickerController to capture or load image.
+    var imagePicker : UIImagePickerController?
     
-    // dispatch queues
+    /// A dispatch queue to convert images to jpeg and to thumbnail size
     let convertQueue = dispatch_queue_create("convertQueue", DISPATCH_QUEUE_CONCURRENT)
+    
+    /// A dispatch queue for the Core Data managed context
     let saveQueue = dispatch_queue_create("saveQueue", DISPATCH_QUEUE_CONCURRENT)
     
-    // moc
+    /// The Core Data managed context
     var managedContext : NSManagedObjectContext?
     
+    /// The SourceType for UIImagePickerController
+    var sourceType : UIImagePickerControllerSourceType = .Camera // don't use camera in the simulator
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // This is the right moment in the ViewController Life Cycle to setup Core Data and the ImagePicker
+    override func viewDidAppear(animated: Bool) {
         
-        imagePickerSetup() // image picker delegate and settings
+        // verify source and assign value to imagePicker
+        imagePickerSetup(forSource: sourceType)
         
-        coreDataSetup() // set value of moc on the right thread
-
+        // setup Core Data on the correct thread
+        coreDataSetup()
+        
+        // else images will appear distorted
+        imageView.contentMode = .ScaleAspectFit
     }
     
-    @IBAction func capture(sender: AnyObject) { // button action
+    /**
+     CaptureButtonAction
+     
+     - parameter sender: UIButton
+     */
+    @IBAction func capture(sender: AnyObject) {
+        
+        // unwrap the imagePicker
+        guard let imagePicker = imagePicker else {
+            cantOpenPicker(withSource: sourceType)
+            return
+        }
+        
+        // present the imagePicker
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func load(sender: AnyObject) { // button action
+    /**
+     LoadButtonAction
+     
+     - parameter sender: UIButton
+     */
+    @IBAction func load(sender: AnyObject) {
         
+        // loadImage function with a completion block
         loadImages { (images) -> Void in
             if let thumbnailData = images?.last?.thumbnail?.imageData {
                 let image = UIImage(data: thumbnailData)
                 self.imageView.image = image
+            } else {
+                self.noImagesFound()
             }
         }
     }

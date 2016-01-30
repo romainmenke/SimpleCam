@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ViewController" class="dashAnchor"></a>
+    <a title="ViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (38% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FullRes.html">FullRes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Thumbnail.html">Thumbnail</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewController.html">ViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CGSize.html">CGSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ViewController</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController9imageViewXwGSQCSo11UIImageView_"></a>
+                    <a name="//apple_ref/swift/Property/imageView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController9imageViewXwGSQCSo11UIImageView_">imageView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The UIImageView to display loaded images.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController11imagePickerGSqCSo23UIImagePickerController_"></a>
+                    <a name="//apple_ref/swift/Property/imagePicker" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController11imagePickerGSqCSo23UIImagePickerController_">imagePicker</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The UIImagePickerController to capture or load image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">imagePicker</span> <span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController12convertQueueGSQPSo17OS_dispatch_queue__"></a>
+                    <a name="//apple_ref/swift/Property/convertQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController12convertQueueGSQPSo17OS_dispatch_queue__">convertQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A dispatch queue to convert images to jpeg and to thumbnail size</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">convertQueue</span> <span class="o">=</span> <span class="nf">dispatch_queue_create</span><span class="p">(</span><span class="s">"convertQueue"</span><span class="p">,</span> <span class="kt">DISPATCH_QUEUE_CONCURRENT</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController9saveQueueGSQPSo17OS_dispatch_queue__"></a>
+                    <a name="//apple_ref/swift/Property/saveQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController9saveQueueGSQPSo17OS_dispatch_queue__">saveQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A dispatch queue for the Core Data managed context</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">saveQueue</span> <span class="o">=</span> <span class="nf">dispatch_queue_create</span><span class="p">(</span><span class="s">"saveQueue"</span><span class="p">,</span> <span class="kt">DISPATCH_QUEUE_CONCURRENT</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController14managedContextGSqCSo22NSManagedObjectContext_"></a>
+                    <a name="//apple_ref/swift/Property/managedContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController14managedContextGSqCSo22NSManagedObjectContext_">managedContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Core Data managed context</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">managedContext</span> <span class="p">:</span> <span class="kt">NSManagedObjectContext</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController10sourceTypeOSC33UIImagePickerControllerSourceType"></a>
+                    <a name="//apple_ref/swift/Property/sourceType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController10sourceTypeOSC33UIImagePickerControllerSourceType">sourceType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The SourceType for UIImagePickerController</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sourceType</span> <span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Camera</span> <span class="c1">// don't use camera in the simulator</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController13viewDidAppearFS0_FSbT_"></a>
+                    <a name="//apple_ref/swift/Method/viewDidAppear(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController13viewDidAppearFS0_FSbT_">viewDidAppear(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController7captureFS0_FPSs9AnyObject_T_"></a>
+                    <a name="//apple_ref/swift/Method/capture(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController7captureFS0_FPSs9AnyObject_T_">capture(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>CaptureButtonAction</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">capture</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIButton</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController4loadFS0_FPSs9AnyObject_T_"></a>
+                    <a name="//apple_ref/swift/Method/load(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController4loadFS0_FPSs9AnyObject_T_">load(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>LoadButtonAction</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">load</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sender</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIButton</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController14cantOpenPickerFS0_FT10withSourceOSC33UIImagePickerControllerSourceType_T_"></a>
+                    <a name="//apple_ref/swift/Method/cantOpenPicker(withSource:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController14cantOpenPickerFS0_FT10withSourceOSC33UIImagePickerControllerSourceType_T_">cantOpenPicker(withSource:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Display Alert when the ImagePicker sourceType is unavailable</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cantOpenPicker</span><span class="p">(</span><span class="n">withSource</span> <span class="nv">source</span><span class="p">:</span><span class="kt">UIImagePickerControllerSourceType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIImagePickerControllerSourceType</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController13noImagesFoundFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/noImagesFound()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController13noImagesFoundFS0_FT_T_">noImagesFound()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Display Alert when loadImages had no results</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">noImagesFound</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController16imagePickerSetupFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/imagePickerSetup()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController16imagePickerSetupFS0_FT_T_">imagePickerSetup()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup imagePicker and display Alert if it is not possible</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">imagePickerSetup</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController16imagePickerSetupFS0_FT9forSourceOSC33UIImagePickerControllerSourceType_T_"></a>
+                    <a name="//apple_ref/swift/Method/imagePickerSetup(forSource:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController16imagePickerSetupFS0_FT9forSourceOSC33UIImagePickerControllerSourceType_T_">imagePickerSetup(forSource:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup imagePicker and display Alert if it is not possible</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">imagePickerSetup</span><span class="p">(</span><span class="n">forSource</span> <span class="nv">source</span> <span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Source for the imagePicker</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController21imagePickerControllerFS0_FTCSo23UIImagePickerController21didFinishPickingImageCSo7UIImage11editingInfoGSqGVSs10DictionarySSPSs9AnyObject____T_"></a>
+                    <a name="//apple_ref/swift/Method/imagePickerController(_:didFinishPickingImage:editingInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController21imagePickerControllerFS0_FTCSo23UIImagePickerController21didFinishPickingImageCSo7UIImage11editingInfoGSqGVSs10DictionarySSPSs9AnyObject____T_">imagePickerController(_:didFinishPickingImage:editingInfo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController14canStartPickerFS0_FT9forSourceOSC33UIImagePickerControllerSourceType9withAlertSb_Sb"></a>
+                    <a name="//apple_ref/swift/Method/canStartPicker(forSource:withAlert:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController14canStartPickerFS0_FT9forSourceOSC33UIImagePickerControllerSourceType9withAlertSb_Sb">canStartPicker(forSource:withAlert:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Verify Source for UIImagePickerController</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">canStartPicker</span><span class="p">(</span><span class="n">forSource</span> <span class="nv">source</span><span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span><span class="p">,</span> <span class="n">withAlert</span> <span class="nv">alert</span><span class="p">:</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alert</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>show Alert if check fails</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if Source is available</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController10loadImagesFS0_FFT6imagesGSqGSaCS_7FullRes___T_T_"></a>
+                    <a name="//apple_ref/swift/Method/loadImages(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController10loadImagesFS0_FFT6imagesGSqGSaCS_7FullRes___T_T_">loadImages(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Load all images saved by the App</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadImages</span><span class="p">(</span><span class="nv">fetched</span><span class="p">:(</span><span class="nv">images</span><span class="p">:[</span><span class="kt">FullRes</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fetched</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Block for the background fetch.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController13coreDataSetupFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/coreDataSetup()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController13coreDataSetupFS0_FT_T_">coreDataSetup()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start Core Data managed context on the correct queue</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">coreDataSetup</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController21prepareImageForSavingFS0_FCSo7UIImageT_"></a>
+                    <a name="//apple_ref/swift/Method/prepareImageForSaving(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController21prepareImageForSavingFS0_FCSo7UIImageT_">prepareImageForSaving(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert Image to JPEG and generate a thumbnail</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">prepareImageForSaving</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="kt">UIImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a captured image</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController9saveImageFS0_FTCSo6NSData13thumbnailDataS1_4dateSd_T_"></a>
+                    <a name="//apple_ref/swift/Method/saveImage(_:thumbnailData:date:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController9saveImageFS0_FTCSo6NSData13thumbnailDataS1_4dateSd_T_">saveImage(_:thumbnailData:date:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Save image to Core Data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">saveImage</span><span class="p">(</span><span class="nv">imageData</span><span class="p">:</span><span class="kt">NSData</span><span class="p">,</span> <span class="nv">thumbnailData</span><span class="p">:</span><span class="kt">NSData</span><span class="p">,</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imageData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSData representation of the original image</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>thumbnailData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSData representation of the thumbnail image</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>timestamp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

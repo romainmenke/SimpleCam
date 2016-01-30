@@ -13,9 +13,15 @@ import CoreData
 
 extension ViewController {
     
+    /**
+     Load all images saved by the App
+     
+     - parameter fetched: Completion Block for the background fetch.
+     */
     func loadImages(fetched:(images:[FullRes]?) -> Void) {
         
         dispatch_async(saveQueue) {
+            
             guard let moc = self.managedContext else {
                 return
             }
@@ -29,7 +35,9 @@ extension ViewController {
                     fetched(images: imageData)
                 }
             } catch let error as NSError {
-                print("Could not fetch \(error), \(error.userInfo)")
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.noImagesFound()
+                }
                 return
             }
         }
