@@ -20,7 +20,9 @@ extension ViewController {
      */
     func loadImages(fetched:(images:[FullRes]?) -> Void) {
         
-        dispatch_async(saveQueue) {
+        startActivity()
+        
+        Run.async(coreDataQueue) {
             
             guard let moc = self.managedContext else {
                 return
@@ -31,11 +33,17 @@ extension ViewController {
             do {
                 let results = try moc.executeFetchRequest(fetchRequest)
                 let imageData = results as? [FullRes]
-                dispatch_async(dispatch_get_main_queue()) {
+                
+                self.stopActivity()
+                
+                Run.main {
                     fetched(images: imageData)
                 }
-            } catch let error as NSError {
-                dispatch_async(dispatch_get_main_queue()) {
+            } catch {
+                
+                self.stopActivity()
+                
+                Run.main {
                     self.noImagesFound()
                 }
                 return

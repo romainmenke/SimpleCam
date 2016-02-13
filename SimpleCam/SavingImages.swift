@@ -22,9 +22,9 @@ extension ViewController {
         // use date as unique id
         let date : Double = NSDate().timeIntervalSince1970
         
-        
+        startActivity()
         // dispatch with gcd.
-        dispatch_async(convertQueue) {
+        Run.async(imageProcessingQueue) {
             
             // create NSData from UIImage
             guard let imageData = UIImageJPEGRepresentation(image, 1) else {
@@ -45,6 +45,8 @@ extension ViewController {
             // send to save function
             self.saveImage(imageData, thumbnailData: thumbnailData, date: date)
             
+            self.stopActivity()
+            
         }
     }
 }
@@ -60,7 +62,9 @@ extension ViewController {
      */
     func saveImage(imageData:NSData, thumbnailData:NSData, date: Double) {
         
-        dispatch_barrier_sync(saveQueue) {
+        startActivity()
+        
+        Run.barrierSync(coreDataQueue) {
             // create new objects in moc
             guard let moc = self.managedContext else {
                 return
@@ -89,6 +93,8 @@ extension ViewController {
             
             // clear the moc
             moc.refreshAllObjects()
+            
+            self.stopActivity()
         }
     }
 }

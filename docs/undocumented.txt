@@ -1,18 +1,13 @@
 Thumbnail.swift
 	class Thumbnail : NSManagedObject
+	class Thumbnail : NSManagedObject
 	class Thumbnail: NSManagedObject
-Thumbnail+CoreDataProperties.swift
-	@NSManaged var imageData: NSData?
-	@NSManaged var id: NSNumber?
-	@NSManaged var fullRes: NSManagedObject?
-FullRes.swift
-	class FullRes: NSManagedObject
-	class FullRes : NSManagedObject
 ViewController.swift
 	class ViewController : UIViewController
 	class ViewController : UIViewController
+	class ViewController : UIViewController
 	class ViewController: UIViewController
-	override func viewDidAppear(animated: Bool)
+	override func viewDidLoad()
 	class ViewController : UIViewController
 	class ViewController : UIViewController
 	class ViewController : UIViewController
@@ -20,9 +15,23 @@ ViewController.swift
 	class ViewController : UIViewController
 ImagePickerSetup.swift
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?)
-FullRes+CoreDataProperties.swift
+ActivityIndicator.swift
+	func startActivity()
+	func stopActivity()
+Thumbnail+CoreDataProperties.swift
 	@NSManaged var imageData: NSData?
-	@NSManaged var thumbnail: Thumbnail?
+	@NSManaged var id: NSNumber?
+	@NSManaged var fullRes: NSManagedObject?
+FullRes.swift
+	class FullRes: NSManagedObject
+	class FullRes : NSManagedObject
+	class FullRes : NSManagedObject
+ImageCell.swift
+	class ImageDisplayCell : UITableViewCell
+	static var dateFormatter : NSDateFormatter
+	@IBOutlet weak var thumbnailView: UIImageView!
+	@IBOutlet weak var label: UILabel!
+	override func awakeFromNib()
 AppDelegate.swift
 	class AppDelegate: UIResponder, UIApplicationDelegate
 	var window: UIWindow?
@@ -37,3 +46,12 @@ AppDelegate.swift
 	lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator =
 	lazy var managedObjectContext: NSManagedObjectContext =
 	func saveContext ()
+FullRes+CoreDataProperties.swift
+	@NSManaged var imageData: NSData?
+	@NSManaged var thumbnail: Thumbnail?
+TableViewDataSource.swift
+	class TableViewDataSource : NSObject, UITableViewDataSource
+	var data : [(image:UIImage,id:NSNumber)] = []
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell

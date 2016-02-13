@@ -18,7 +18,7 @@ extension ViewController {
      */
     func coreDataSetup() {
         
-        dispatch_sync(saveQueue) {
+        Run.sync(coreDataQueue) {
             self.managedContext = AppDelegate().managedObjectContext
         }
         

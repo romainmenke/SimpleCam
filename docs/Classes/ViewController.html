@@ -14,7 +14,7 @@
     <a title="ViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (38% documented)</p>
+        <p><a href="../index.html"> Docs</a> (39% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -37,6 +37,12 @@
                 <a href="../Classes/FullRes.html">FullRes</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ImageDisplayCell.html">ImageDisplayCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TableViewDataSource.html">TableViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Thumbnail.html">Thumbnail</a>
               </li>
               <li class="nav-group-task">
@@ -55,6 +61,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Run.html">Run</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -70,9 +84,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC9SimpleCam14ViewController9imageViewXwGSQCSo11UIImageView_"></a>
-                    <a name="//apple_ref/swift/Property/imageView" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC9SimpleCam14ViewController9imageViewXwGSQCSo11UIImageView_">imageView</a>
+                    <a name="/s:vC9SimpleCam14ViewController9tableViewXwGSQCSo11UITableView_"></a>
+                    <a name="//apple_ref/swift/Property/tableView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController9tableViewXwGSQCSo11UITableView_">tableView</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -80,14 +94,122 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The UIImageView to display loaded images.</p>
+                        <p>The UITableView to display loaded images.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">tableView</span> <span class="p">:</span> <span class="kt">UITableView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController19tableViewDataSourceCS_19TableViewDataSource"></a>
+                    <a name="//apple_ref/swift/Property/tableViewDataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController19tableViewDataSourceCS_19TableViewDataSource">tableViewDataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data Source for UITableView</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">tableViewDataSource</span> <span class="o">=</span> <span class="kt">TableViewDataSource</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController17activityIndicatorXwGSQCSo23UIActivityIndicatorView_"></a>
+                    <a name="//apple_ref/swift/Property/activityIndicator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController17activityIndicatorXwGSQCSo23UIActivityIndicatorView_">activityIndicator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The UIActivityIndicatorView to indicate long during tasks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">activityIndicator</span><span class="p">:</span> <span class="kt">UIActivityIndicatorView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController13captureButtonXwGSQCSo8UIButton_"></a>
+                    <a name="//apple_ref/swift/Property/captureButton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController13captureButtonXwGSQCSo8UIButton_">captureButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button for capture action</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">captureButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9SimpleCam14ViewController10loadButtonXwGSQCSo8UIButton_"></a>
+                    <a name="//apple_ref/swift/Property/loadButton" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController10loadButtonXwGSQCSo8UIButton_">loadButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Button for load action</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">loadButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -124,9 +246,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC9SimpleCam14ViewController12convertQueueGSQPSo17OS_dispatch_queue__"></a>
-                    <a name="//apple_ref/swift/Property/convertQueue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC9SimpleCam14ViewController12convertQueueGSQPSo17OS_dispatch_queue__">convertQueue</a>
+                    <a name="/s:vC9SimpleCam14ViewController20imageProcessingQueueGSQPSo17OS_dispatch_queue__"></a>
+                    <a name="//apple_ref/swift/Property/imageProcessingQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController20imageProcessingQueueGSQPSo17OS_dispatch_queue__">imageProcessingQueue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -141,7 +263,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">convertQueue</span> <span class="o">=</span> <span class="nf">dispatch_queue_create</span><span class="p">(</span><span class="s">"convertQueue"</span><span class="p">,</span> <span class="kt">DISPATCH_QUEUE_CONCURRENT</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">imageProcessingQueue</span> <span class="o">=</span> <span class="nf">dispatch_queue_create</span><span class="p">(</span><span class="s">"imageProcessingQueue"</span><span class="p">,</span> <span class="kt">DISPATCH_QUEUE_CONCURRENT</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -151,9 +273,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC9SimpleCam14ViewController9saveQueueGSQPSo17OS_dispatch_queue__"></a>
-                    <a name="//apple_ref/swift/Property/saveQueue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC9SimpleCam14ViewController9saveQueueGSQPSo17OS_dispatch_queue__">saveQueue</a>
+                    <a name="/s:vC9SimpleCam14ViewController13coreDataQueueGSQPSo17OS_dispatch_queue__"></a>
+                    <a name="//apple_ref/swift/Property/coreDataQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9SimpleCam14ViewController13coreDataQueueGSQPSo17OS_dispatch_queue__">coreDataQueue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -168,7 +290,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">saveQueue</span> <span class="o">=</span> <span class="nf">dispatch_queue_create</span><span class="p">(</span><span class="s">"saveQueue"</span><span class="p">,</span> <span class="kt">DISPATCH_QUEUE_CONCURRENT</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">coreDataQueue</span> <span class="o">=</span> <span class="nf">dispatch_queue_create</span><span class="p">(</span><span class="s">"coreDataQueue"</span><span class="p">,</span> <span class="kt">DISPATCH_QUEUE_CONCURRENT</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -222,7 +344,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sourceType</span> <span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Camera</span> <span class="c1">// don't use camera in the simulator</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sourceType</span> <span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span> <span class="o">=</span> <span class="o">.</span><span class="kt">PhotoLibrary</span> <span class="c1">// don't use camera in the simulator</span></code></pre>
 
                         </div>
                       </div>
@@ -232,9 +354,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9SimpleCam14ViewController13viewDidAppearFS0_FSbT_"></a>
-                    <a name="//apple_ref/swift/Method/viewDidAppear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9SimpleCam14ViewController13viewDidAppearFS0_FSbT_">viewDidAppear(_:)</a>
+                    <a name="/s:FC9SimpleCam14ViewController11viewDidLoadFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController11viewDidLoadFS0_FT_T_">viewDidLoad()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -524,6 +646,48 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FC9SimpleCam14ViewController13startActivityFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/startActivity()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController13startActivityFS0_FT_T_">startActivity()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9SimpleCam14ViewController12stopActivityFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/stopActivity()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9SimpleCam14ViewController12stopActivityFS0_FT_T_">stopActivity()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC9SimpleCam14ViewController14canStartPickerFS0_FT9forSourceOSC33UIImagePickerControllerSourceType9withAlertSb_Sb"></a>
                     <a name="//apple_ref/swift/Method/canStartPicker(forSource:withAlert:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC9SimpleCam14ViewController14canStartPickerFS0_FT9forSourceOSC33UIImagePickerControllerSourceType9withAlertSb_Sb">canStartPicker(forSource:withAlert:)</a>
@@ -788,7 +952,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-01-30)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-02-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
