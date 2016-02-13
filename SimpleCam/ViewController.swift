@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     var managedContext : NSManagedObjectContext?
     
     /// The SourceType for UIImagePickerController
-    var sourceType : UIImagePickerControllerSourceType = .PhotoLibrary // don't use camera in the simulator
+    var sourceType : UIImagePickerControllerSourceType = .Camera // don't use camera in the simulator
     
     // This is the right moment in the ViewController Life Cycle to setup Core Data and the ImagePicker
     override func viewDidLoad() {
@@ -87,11 +87,13 @@ class ViewController: UIViewController {
                 
                 for maybeThumbnail in maybeThumbnails {
                     if let thumbnail = maybeThumbnail {
+                        
+                        // filter out duplicates
                         let isDuplicate = self.tableViewDataSource.data.contains {
                             return $0.id == thumbnail.id
                         }
                         
-                        if !isDuplicate { thumbnails.append(thumbnail);print(thumbnail.id) }
+                        if !isDuplicate { thumbnails.append(thumbnail) }
                         
                     }
                 }
@@ -105,6 +107,7 @@ class ViewController: UIViewController {
                     paths.append(NSIndexPath(forRow: i, inSection: 0))
                 }
                 
+                // make sure it updates happen on the main thread
                 Run.main {
                     self.tableView.beginUpdates()
                     self.tableView.insertRowsAtIndexPaths(paths, withRowAnimation: UITableViewRowAnimation.Fade)
