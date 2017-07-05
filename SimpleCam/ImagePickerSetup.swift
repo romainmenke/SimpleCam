@@ -17,7 +17,7 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
      */
     func imagePickerSetup() {
         
-        imagePickerSetup(forSource: .Camera)
+        imagePickerSetup(forSource: .camera)
         
     }
     
@@ -37,9 +37,9 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         prepareImageForSaving(image)
         
     }

@@ -17,7 +17,6 @@ extension ViewController {
      Start Core Data managed context on the correct queue
      */
     func coreDataSetup() {
-        
         Run.sync(coreDataQueue) {
             self.managedContext = AppDelegate().managedObjectContext
         }

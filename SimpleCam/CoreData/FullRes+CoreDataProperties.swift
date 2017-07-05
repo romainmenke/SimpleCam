@@ -14,7 +14,7 @@ import CoreData
 
 extension FullRes {
 
-    @NSManaged var imageData: NSData?
+    @NSManaged var imageData: Data?
     @NSManaged var thumbnail: Thumbnail?
 
 }

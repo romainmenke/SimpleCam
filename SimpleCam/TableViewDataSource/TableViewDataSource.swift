@@ -13,22 +13,22 @@ class TableViewDataSource : NSObject, UITableViewDataSource {
     
     var data : [(image:UIImage,id:NSNumber)] = []
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as? ImageDisplayCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as? ImageDisplayCell {
         
             cell.thumbnailView.image = data[indexPath.row].image
             let dateNumber = Double(data[indexPath.row].id)
-            let date = NSDate(timeIntervalSince1970: dateNumber)
-            cell.label.text = ImageDisplayCell.dateFormatter.stringFromDate(date)
+            let date = Date(timeIntervalSince1970: dateNumber)
+            cell.label.text = ImageDisplayCell.dateFormatter.string(from: date)
             
             return cell
             

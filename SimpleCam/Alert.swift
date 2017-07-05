@@ -21,18 +21,18 @@ extension ViewController {
         let sourceName : String
         
         switch source {
-        case .Camera : sourceName = "Camera"
-        case .PhotoLibrary : sourceName = "Photo Library"
-        case .SavedPhotosAlbum : sourceName = "Saved Photos Album"
+        case .camera : sourceName = "Camera"
+        case .photoLibrary : sourceName = "Photo Library"
+        case .savedPhotosAlbum : sourceName = "Saved Photos Album"
         }
         
-        let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         
-        let alertVC = UIAlertController(title: "Sorry", message: "Can't access your \(sourceName)", preferredStyle: .Alert)
+        let alertVC = UIAlertController(title: "Sorry", message: "Can't access your \(sourceName)", preferredStyle: .alert)
         
         alertVC.addAction(alertAction)
         
-        self.presentViewController(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     /**
@@ -40,12 +40,12 @@ extension ViewController {
      */
     func noImagesFound() {
         
-        let alertAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         
-        let alertVC = UIAlertController(title: "No Images Found", message: "There were no images saved in Core Data", preferredStyle: .Alert)
+        let alertVC = UIAlertController(title: "No Images Found", message: "There were no images saved in Core Data", preferredStyle: .alert)
         
         alertVC.addAction(alertAction)
         
-        self.presentViewController(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
 }

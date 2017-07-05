@@ -14,7 +14,7 @@ import CoreData
 
 extension Thumbnail {
 
-    @NSManaged var imageData: NSData?
+    @NSManaged var imageData: Data?
     @NSManaged var id: NSNumber?
     @NSManaged var fullRes: NSManagedObject?
 

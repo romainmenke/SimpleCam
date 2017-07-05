@@ -18,7 +18,7 @@ extension CGSize {
      
      - returns: scaled size
      */
-    func resizeFill(toSize: CGSize) -> CGSize {
+    func resizeFill(_ toSize: CGSize) -> CGSize {
         
         let scale : CGFloat = (self.height / self.width) < (toSize.height / toSize.width) ? (self.height / toSize.height) : (self.width / toSize.width)
         return CGSize(width: (self.width / scale), height: (self.height / scale))

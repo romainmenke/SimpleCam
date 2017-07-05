@@ -12,14 +12,14 @@ import UIKit
 
 class ImageDisplayCell : UITableViewCell {
 
-    private static var storedDateFormatter : NSDateFormatter?
-    static var dateFormatter : NSDateFormatter {
+    fileprivate static var storedDateFormatter : DateFormatter?
+    static var dateFormatter : DateFormatter {
         if let storedDateFormatter = storedDateFormatter {
             return storedDateFormatter
         } else {
-            let formatter = NSDateFormatter()
-            formatter.dateStyle = .MediumStyle
-            formatter.timeStyle = .ShortStyle
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .short
             storedDateFormatter = formatter
             return formatter
         }
@@ -30,7 +30,7 @@ class ImageDisplayCell : UITableViewCell {
     
     override func awakeFromNib() {
         thumbnailView.layer.cornerRadius = thumbnailView.frame.width / 2
-        thumbnailView.contentMode = .ScaleAspectFill
+        thumbnailView.contentMode = .scaleAspectFill
         thumbnailView.clipsToBounds = true
     }
     

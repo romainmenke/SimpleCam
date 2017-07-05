@@ -24,8 +24,8 @@ extension UIImage {
         let aspectFill = self.size.resizeFill(newSize)
         
         UIGraphicsBeginImageContextWithOptions(aspectFill, false, 0.0);
-        self.drawInRect(CGRectMake(0, 0, aspectFill.width, aspectFill.height))
-        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        self.draw(in: CGRect(x: 0, y: 0, width: aspectFill.width, height: aspectFill.height))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return newImage
