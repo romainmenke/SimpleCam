@@ -15,7 +15,7 @@ extension Thumbnail {
     var image : UIImage? {
         get {
             if let imageData = imageData {
-                return UIImage(data: imageData)
+                return UIImage(data: imageData as Data)
             }
             return nil
         }

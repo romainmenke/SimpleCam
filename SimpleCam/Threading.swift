@@ -19,8 +19,8 @@ struct Run {
      - parameter queue: Queue for the task to run on
      - parameter task:  the Task to be executed
      */
-    static func sync(queue: dispatch_queue_t,task:() -> Void) {
-        dispatch_sync(queue) {
+    static func sync(_ queue: DispatchQueue,task:() -> Void) {
+        queue.sync {
             task()
         }
     }
@@ -31,8 +31,8 @@ struct Run {
      - parameter queue: Queue for the task to run on
      - parameter task:  the Task to be executed
      */
-    static func async(queue: dispatch_queue_t,task:() -> Void) {
-        dispatch_async(queue) {
+    static func async(_ queue: DispatchQueue,task:@escaping () -> Void) {
+        queue.async {
             task()
         }
     }
@@ -43,8 +43,8 @@ struct Run {
      - parameter queue: Queue for the task to run on
      - parameter task:  the Task to be executed
      */
-    static func barrierSync(queue: dispatch_queue_t,task:() -> Void) {
-        dispatch_barrier_sync(queue) {
+    static func barrierSync(_ queue: DispatchQueue,task:() -> Void) {
+        queue.sync(flags: .barrier)  {
             task()
         }
     }
@@ -54,8 +54,8 @@ struct Run {
      
      - parameter task:  the Task to be executed
      */
-    static func main(task:() -> Void) {
-        dispatch_async(dispatch_get_main_queue()) {
+    static func main(_ task:@escaping () -> Void) {
+        DispatchQueue.main.async {
             task()
         }
     }

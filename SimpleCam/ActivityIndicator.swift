@@ -13,14 +13,14 @@ extension ViewController {
     
     func startActivity() {
         Run.main {
-            self.activityIndicator.hidden = false
+            self.activityIndicator.isHidden = false
             self.activityIndicator.startAnimating()
         }
     }
     
     func stopActivity() {
         Run.main {
-            self.activityIndicator.hidden = true
+            self.activityIndicator.isHidden = true
             self.activityIndicator.stopAnimating()
         }
     }

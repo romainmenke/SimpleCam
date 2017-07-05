@@ -28,12 +28,12 @@ extension ViewController {
         return result
     }
     
-    private func pickerCanStart(withSource source:UIImagePickerControllerSourceType) -> Bool {
+    fileprivate func pickerCanStart(withSource source:UIImagePickerControllerSourceType) -> Bool {
         
         guard UIImagePickerController.isSourceTypeAvailable(source) else {
             return false
         }
-        guard let sourceTypes = UIImagePickerController.availableMediaTypesForSourceType(source) where sourceTypes.contains(String(kUTTypeImage)) else {
+        guard let sourceTypes = UIImagePickerController.availableMediaTypes(for: source), sourceTypes.contains(String(kUTTypeImage)) else {
             return false
         }
         

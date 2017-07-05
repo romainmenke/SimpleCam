@@ -18,7 +18,7 @@ extension ViewController {
      
      - parameter fetched: Completion Block for the background fetch.
      */
-    func loadImages(fetched:(images:[FullRes]?) -> Void) {
+    func loadImages(_ fetched:@escaping (_ images:[Thumbnail]) -> Void) {
         
         startActivity()
         
@@ -28,25 +28,38 @@ extension ViewController {
                 return
             }
             
-            let fetchRequest = NSFetchRequest(entityName: "FullRes")
+            let privateMOC = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+            privateMOC.parent = moc
             
-            do {
-                let results = try moc.executeFetchRequest(fetchRequest)
-                let imageData = results as? [FullRes]
+            privateMOC.perform {
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Const.CoreData.Thumbnail)
                 
-                self.stopActivity()
-                
-                Run.main {
-                    fetched(images: imageData)
+                do {
+                    let results = try privateMOC.fetch(fetchRequest)
+                    let maybeImageData = results as? [Thumbnail]
+                    
+                    guard let imageData = maybeImageData else {
+                        Run.main {
+                            self.noImagesFound()
+                        }
+                        return
+                    }
+                    
+                    self.stopActivity()
+                    Run.main {
+                        fetched(imageData.filter { thumbnail in
+                            return thumbnail.imageData != nil && thumbnail.id != nil
+                        })
+                    }
+                } catch {
+                    
+                    self.stopActivity()
+                    
+                    Run.main {
+                        self.noImagesFound()
+                    }
+                    return
                 }
-            } catch {
-                
-                self.stopActivity()
-                
-                Run.main {
-                    self.noImagesFound()
-                }
-                return
             }
         }
     }

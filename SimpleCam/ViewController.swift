@@ -22,21 +22,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var captureButton: UIButton!
     /// Button for load action
     @IBOutlet weak var loadButton: UIButton!
+    // Button to delete images
+    @IBOutlet weak var deleteButton: UIButton!
 
     /// The UIImagePickerController to capture or load image.
     var imagePicker : UIImagePickerController?
     
     /// A dispatch queue to convert images to jpeg and to thumbnail size
-    let imageProcessingQueue = dispatch_queue_create("imageProcessingQueue", DISPATCH_QUEUE_CONCURRENT)
+    let imageProcessingQueue = DispatchQueue(label: "imageProcessingQueue", attributes: DispatchQueue.Attributes.concurrent)
     
     /// A dispatch queue for the Core Data managed context
-    let coreDataQueue = dispatch_queue_create("coreDataQueue", DISPATCH_QUEUE_CONCURRENT)
+    let coreDataQueue = DispatchQueue(label: "coreDataQueue")
     
     /// The Core Data managed context
     var managedContext : NSManagedObjectContext?
     
     /// The SourceType for UIImagePickerController
-    var sourceType : UIImagePickerControllerSourceType = .Camera // don't use camera in the simulator
+    var sourceType : UIImagePickerControllerSourceType = .camera // don't use camera in the simulator
     
     // This is the right moment in the ViewController Life Cycle to setup Core Data and the ImagePicker
     override func viewDidLoad() {
@@ -50,8 +52,9 @@ class ViewController: UIViewController {
         
         captureButton.layer.cornerRadius = 10
         loadButton.layer.cornerRadius = 10
+        deleteButton.layer.cornerRadius = 10
         
-        activityIndicator.hidden = true
+        activityIndicator.isHidden = true
     }
     
     /**
@@ -59,7 +62,7 @@ class ViewController: UIViewController {
      
      - parameter sender: UIButton
      */
-    @IBAction func capture(sender: AnyObject) {
+    @IBAction func capture(_ sender: AnyObject) {
         
         // unwrap the imagePicker
         guard let imagePicker = imagePicker else {
@@ -68,7 +71,7 @@ class ViewController: UIViewController {
         }
         
         // present the imagePicker
-        presentViewController(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil)
     }
     
     /**
@@ -76,46 +79,47 @@ class ViewController: UIViewController {
      
      - parameter sender: UIButton
      */
-    @IBAction func load(sender: AnyObject) {
+    @IBAction func load(_ sender: AnyObject) {
         
         // loadImage function with a completion block
-        loadImages { (images) -> Void in
-            if let images = images {
+        loadImages { (thumbnails) -> Void in
                 
-                let maybeThumbnails = images.map { $0.thumbnail }
-                var thumbnails : [Thumbnail] = []
-                
-                for maybeThumbnail in maybeThumbnails {
-                    if let thumbnail = maybeThumbnail {
-                        
-                        // filter out duplicates
-                        let isDuplicate = self.tableViewDataSource.data.contains {
-                            return $0.id == thumbnail.id
-                        }
-                        
-                        if !isDuplicate { thumbnails.append(thumbnail) }
-                        
-                    }
+            var newThumbnails : [Thumbnail] = []
+            
+            for thumbnail in thumbnails {
+                    
+                // filter out duplicates
+                let isDuplicate = self.tableViewDataSource.data.contains {
+                    return $0.id == thumbnail.id
                 }
                 
-                var paths : [NSIndexPath] = []
-                let start = self.tableViewDataSource.data.count
-                self.tableViewDataSource.data += thumbnails.map { return (image:$0.image ?? UIImage(),id:$0.id ?? 0.0) }
-                let end = self.tableViewDataSource.data.count
-                
-                for i in start..<end {
-                    paths.append(NSIndexPath(forRow: i, inSection: 0))
+                if !isDuplicate {
+                    newThumbnails.append(thumbnail)
                 }
-                
-                // make sure it updates happen on the main thread
-                Run.main {
-                    self.tableView.beginUpdates()
-                    self.tableView.insertRowsAtIndexPaths(paths, withRowAnimation: UITableViewRowAnimation.Fade)
-                    self.tableView.endUpdates()
-                }
-            } else {
-                self.noImagesFound()
             }
+            
+            var paths : [IndexPath] = []
+            let start = self.tableViewDataSource.data.count
+            self.tableViewDataSource.data += newThumbnails.map { return (image:$0.image ?? UIImage(),id:$0.id ?? 0.0) }
+            let end = self.tableViewDataSource.data.count
+            
+            for i in start..<end {
+                paths.append(IndexPath(row: i, section: 0))
+            }
+            
+            // make sure it updates happen on the main thread
+            Run.main {
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: paths, with: UITableViewRowAnimation.fade)
+                self.tableView.endUpdates()
+            }
+        }
+    }
+    
+    @IBAction func deleteImages(_ sender: AnyObject) {
+        self.deleteAllImages {
+            self.tableViewDataSource.data.removeAll()
+            self.tableView.reloadData()
         }
     }
 }
